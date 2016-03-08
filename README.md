@@ -5,7 +5,10 @@ plays back data.csv over a socket.io connection.
 ## quickstart
 
     npm install
+    npm run build
     npm start
+
+note, you will need [lein](https://github.com/technomancy/leiningen)
 
 ## developing
 
