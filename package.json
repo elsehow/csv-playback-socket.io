@@ -1,0 +1,22 @@
+{
+  "name": "gyros-server",
+  "version": "0.1.0",
+  "private": "true",
+  "engines": {
+    "node": "0.12.x"
+  },
+  "dependencies": {
+    "socket.io": "^1.4.5"
+  },
+  "devDependencies": {
+    "source-map-support": "0.4.0",
+    "ws": "0.8.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
