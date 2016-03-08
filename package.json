@@ -1,5 +1,5 @@
 {
-  "name": "gyros-server",
+  "name": "csv-playback-socket.io",
   "version": "0.1.0",
   "private": "true",
   "engines": {
@@ -14,7 +14,9 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node target/server_dev/gyros_server.js",
+    "build": "lein cljsbuild once prod",
+    "start": "node run server.js"
   },
   "author": "",
   "license": "ISC",

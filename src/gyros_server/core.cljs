@@ -1,6 +1,8 @@
 (ns gyros-server.core
   (:require [cljs.nodejs :as nodejs]))
 
+(def port 3333)
+
 (nodejs/enable-util-print!)
 
 (def fs
@@ -8,7 +10,8 @@
 
 (def io
   (let [app (.createServer (nodejs/require "http"))]
-    ((nodejs/require "socket.io") app)))
+    ((nodejs/require "socket.io") app)
+    (.listen app port)))
 
 (def csv-file
    (.readFileSync fs "data.csv"))
@@ -39,6 +42,7 @@
 (defn -main []
   (.on io "connection"
     (fn [socket]
-      (set-timeouts socket.emit))))
+      (set-timeouts socket.emit)))
+  (println (str "listening on " port)))
 
 (set! *main-cli-fn* -main)
