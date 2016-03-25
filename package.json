@@ -16,7 +16,7 @@
   "scripts": {
     "dev": "node target/server_dev/gyros_server.js",
     "build": "lein cljsbuild once prod",
-    "start": "node run server.js"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
